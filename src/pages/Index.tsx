@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { QuickInsights } from "@/components/dashboard/QuickInsights";
 import { ProductionSection } from "@/components/dashboard/ProductionSection";
@@ -11,6 +12,7 @@ import { RiskDistributionChart } from "@/components/dashboard/RiskDistributionCh
 import { SeasonComparison } from "@/components/dashboard/SeasonComparison";
 import { QuickActions } from "@/components/dashboard/QuickActions";
 import { TimeFilter } from "@/components/dashboard/TimeFilter";
+import { Users } from "lucide-react";
 
 const Index = () => {
   return (
@@ -19,8 +21,15 @@ const Index = () => {
         {/* Header with personalized greeting */}
         <DashboardHeader userName="Budi Santoso" userRole="General Manager" />
         
-        {/* Time Filter */}
-        <div className="flex justify-end mb-6">
+        {/* Quick Navigation to PM Dashboard */}
+        <div className="flex items-center justify-between mb-6">
+          <Link
+            to="/pm"
+            className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl text-sm font-medium transition-colors"
+          >
+            <Users className="w-4 h-4" />
+            Lihat Dashboard Project Manager
+          </Link>
           <TimeFilter />
         </div>
         
