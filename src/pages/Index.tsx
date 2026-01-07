@@ -1,6 +1,7 @@
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { QuickInsights } from "@/components/dashboard/QuickInsights";
 import { ProductionSection } from "@/components/dashboard/ProductionSection";
+import { ProductionMap } from "@/components/dashboard/ProductionMap";
 import { FinancialSection } from "@/components/dashboard/FinancialSection";
 import { RiskAlertSection } from "@/components/dashboard/RiskAlertSection";
 import { ProductionTrendChart } from "@/components/dashboard/ProductionTrendChart";
@@ -28,6 +29,11 @@ const Index = () => {
         
         {/* Production & Productivity Metrics */}
         <ProductionSection />
+        
+        {/* Production Map with Hover Info */}
+        <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.25s" }}>
+          <ProductionMap />
+        </div>
         
         {/* Financial Metrics */}
         <FinancialSection />
