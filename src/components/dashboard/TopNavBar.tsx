@@ -17,13 +17,13 @@ export const TopNavBar = ({ userName, location }: TopNavBarProps) => {
             </svg>
           </div>
           <div className="hidden sm:block">
-            <p className="font-bold text-lg">AgriOne</p>
-            <p className="text-xs text-primary-foreground/70">Executive Dashboard</p>
+            <p className="font-bold text-lg">Agriculture One</p>
+            <p className="text-xs text-primary-foreground/70">Dasbor Eksekutif</p>
           </div>
         </div>
         
         <div className="hidden md:flex items-center gap-2 text-sm">
-          <span className="font-medium">Corporate Rice Production Overview</span>
+          <span className="font-medium">Ringkasan Produksi Padi Korporasi</span>
           <div className="flex items-center gap-1 text-primary-foreground/70">
             <MapPin className="w-3 h-3" />
             <span className="text-xs">{location}</span>
@@ -33,20 +33,20 @@ export const TopNavBar = ({ userName, location }: TopNavBarProps) => {
 
       {/* Right: Status & User */}
       <div className="flex items-center gap-3 lg:gap-4">
-        {/* Planting Season */}
+        {/* Musim Tanam */}
         <div className="hidden lg:flex items-center gap-2 bg-primary-foreground/10 px-3 py-1.5 rounded-lg">
           <Calendar className="w-4 h-4" />
           <div>
-            <p className="text-[10px] text-primary-foreground/70">Planting Season</p>
+            <p className="text-[10px] text-primary-foreground/70">Musim Tanam</p>
             <p className="text-xs font-medium">Musim Tanam 1 (MT-1)</p>
           </div>
         </div>
 
-        {/* Last Update */}
+        {/* Pembaruan Terakhir */}
         <div className="hidden lg:flex items-center gap-2 bg-primary-foreground/10 px-3 py-1.5 rounded-lg">
           <RefreshCw className="w-4 h-4" />
           <div>
-            <p className="text-[10px] text-primary-foreground/70">Last Update</p>
+            <p className="text-[10px] text-primary-foreground/70">Pembaruan Terakhir</p>
             <p className="text-xs font-medium">Real-time</p>
           </div>
         </div>
@@ -59,11 +59,11 @@ export const TopNavBar = ({ userName, location }: TopNavBarProps) => {
           </span>
         </button>
 
-        {/* User Profile */}
+        {/* Profil Pengguna */}
         <div className="flex items-center gap-2 bg-primary-foreground/10 px-3 py-1.5 rounded-lg">
           <User className="w-5 h-5" />
           <div className="hidden sm:block">
-            <p className="text-[10px] text-primary-foreground/70">GM View</p>
+            <p className="text-[10px] text-primary-foreground/70">Tampilan GM</p>
             <p className="text-xs font-medium">{userName}</p>
           </div>
         </div>
