@@ -24,19 +24,19 @@ export const ProductionAnalytics = () => {
   return (
     <div className="mb-6">
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-sm font-semibold text-foreground">Production Analytics</h2>
-        <span className="text-xs text-muted-foreground">• Seasonal Performance & Cluster Comparison</span>
+        <h2 className="text-sm font-semibold text-foreground">Analitik Produksi</h2>
+        <span className="text-xs text-muted-foreground">• Performa Musiman & Perbandingan Kluster</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {/* Seasonal Production Trend */}
+        {/* Tren Produksi Musiman */}
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-sm font-medium text-foreground">Seasonal Production Trend</span>
+              <span className="text-sm font-medium text-foreground">Tren Produksi Musiman</span>
             </div>
-            <span className="text-xs text-muted-foreground">vs MT-1 Target</span>
+            <span className="text-xs text-muted-foreground">vs Target MT-1</span>
           </div>
 
           <div className="h-52">
@@ -65,7 +65,7 @@ export const ProductionAnalytics = () => {
                 <Line 
                   type="monotone" 
                   dataKey="actual" 
-                  name="Actual (Ton)"
+                  name="Aktual (Ton)"
                   stroke="hsl(142, 76%, 36%)" 
                   strokeWidth={2}
                   dot={{ fill: 'hsl(142, 76%, 36%)', strokeWidth: 0, r: 4 }}
@@ -83,7 +83,7 @@ export const ProductionAnalytics = () => {
                 <Line 
                   type="monotone" 
                   dataKey="baseline" 
-                  name="MT-1 Baseline"
+                  name="Baseline MT-1"
                   stroke="hsl(var(--muted-foreground))" 
                   strokeWidth={1}
                   strokeDasharray="3 3"
@@ -96,7 +96,7 @@ export const ProductionAnalytics = () => {
           <div className="flex items-center justify-center gap-6 mt-3">
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-0.5 bg-success" />
-              <span className="text-muted-foreground">Actual (Ton)</span>
+              <span className="text-muted-foreground">Aktual (Ton)</span>
             </div>
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-0.5" style={{ backgroundColor: 'hsl(48, 96%, 53%)' }} />
@@ -104,17 +104,17 @@ export const ProductionAnalytics = () => {
             </div>
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-0.5 bg-muted-foreground/50" />
-              <span className="text-muted-foreground">MT-1 Baseline</span>
+              <span className="text-muted-foreground">Baseline MT-1</span>
             </div>
           </div>
         </div>
 
-        {/* Productivity by Cluster */}
+        {/* Produktivitas per Kluster */}
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-success" />
-              <span className="text-sm font-medium text-foreground">Productivity by Cluster</span>
+              <span className="text-sm font-medium text-foreground">Produktivitas per Kluster</span>
             </div>
             <span className="text-xs text-muted-foreground">Inti vs Plasma (Ton/Ha)</span>
           </div>
@@ -144,14 +144,14 @@ export const ProductionAnalytics = () => {
                 />
                 <Bar 
                   dataKey="inti" 
-                  name="Inti Farm" 
+                  name="Lahan Inti" 
                   fill="hsl(142, 76%, 36%)" 
                   radius={[4, 4, 0, 0]}
                   barSize={20}
                 />
                 <Bar 
                   dataKey="plasma" 
-                  name="Plasma Farm" 
+                  name="Lahan Plasma" 
                   fill="hsl(48, 96%, 53%)" 
                   radius={[4, 4, 0, 0]}
                   barSize={20}
@@ -163,11 +163,11 @@ export const ProductionAnalytics = () => {
           <div className="flex items-center justify-center gap-6 mt-3">
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-3 rounded-sm bg-success" />
-              <span className="text-muted-foreground">Inti Farm</span>
+              <span className="text-muted-foreground">Lahan Inti</span>
             </div>
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'hsl(48, 96%, 53%)' }} />
-              <span className="text-muted-foreground">Plasma Farm</span>
+              <span className="text-muted-foreground">Lahan Plasma</span>
             </div>
           </div>
         </div>

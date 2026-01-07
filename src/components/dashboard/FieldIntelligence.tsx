@@ -1,12 +1,12 @@
 import { Info, TrendingUp, AlertTriangle } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, BarChart, Bar, Legend } from "recharts";
 
-// Crop Growth Distribution Data
+// Data Distribusi Fase Pertumbuhan
 const cropGrowthData = [
-  { name: "Vegetative", value: 87, color: "hsl(142, 76%, 36%)" },
-  { name: "Flowering", value: 8, color: "hsl(84, 81%, 44%)" },
-  { name: "Ripening", value: 3, color: "hsl(48, 96%, 53%)" },
-  { name: "Seedling", value: 2, color: "hsl(205, 89%, 48%)" },
+  { name: "Vegetatif", value: 87, color: "hsl(142, 76%, 36%)" },
+  { name: "Berbunga", value: 8, color: "hsl(84, 81%, 44%)" },
+  { name: "Pemasakan", value: 3, color: "hsl(48, 96%, 53%)" },
+  { name: "Pembibitan", value: 2, color: "hsl(205, 89%, 48%)" },
 ];
 
 // Weekly Rainfall Data
@@ -20,7 +20,7 @@ const rainfallData = [
   { day: "Min", value: 20 },
 ];
 
-// Cluster Health Data
+// Data Kesehatan Kluster
 const clusterHealthData = [
   { name: "A", compliance: 92, health: 88 },
   { name: "B", compliance: 78, health: 72 },
@@ -32,21 +32,21 @@ export const FieldIntelligence = () => {
   return (
     <div className="mb-6">
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-sm font-semibold text-foreground">Field Intelligence</h2>
-        <span className="text-xs text-muted-foreground">• Real-time Analytics with AI Insights</span>
+        <h2 className="text-sm font-semibold text-foreground">Inteligensi Lapangan</h2>
+        <span className="text-xs text-muted-foreground">• Analitik Real-time dengan Wawasan AI</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* Crop Growth Distribution */}
+        {/* Distribusi Fase Pertumbuhan */}
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-success" />
-              <span className="text-sm font-medium text-foreground">Crop Growth Distribution</span>
+              <span className="text-sm font-medium text-foreground">Distribusi Fase Pertumbuhan</span>
             </div>
             <div className="flex items-center gap-1 text-xs text-success">
               <TrendingUp className="w-3 h-3" />
-              <span>On Schedule</span>
+              <span>Sesuai Jadwal</span>
             </div>
           </div>
 
@@ -88,22 +88,22 @@ export const FieldIntelligence = () => {
             <div className="flex items-start gap-2">
               <Info className="w-4 h-4 text-info flex-shrink-0 mt-0.5" />
               <p className="text-xs text-muted-foreground">
-                87% of fields are in vegetative stage, indicating synchronized planting. This is optimal for coordinated harvesting in 45-50 days.
+                87% lahan berada di fase vegetatif, menunjukkan penanaman yang terkoordinasi. Ini optimal untuk panen terkoordinasi dalam 45-50 hari.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Weekly Rainfall Pattern */}
+        {/* Pola Curah Hujan Mingguan */}
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-info" />
-              <span className="text-sm font-medium text-foreground">Weekly Rainfall Pattern</span>
+              <span className="text-sm font-medium text-foreground">Pola Curah Hujan Mingguan</span>
             </div>
             <div className="flex items-center gap-1 text-xs text-success">
               <TrendingUp className="w-3 h-3" />
-              <span>+15% vs Expected</span>
+              <span>+15% vs Perkiraan</span>
             </div>
           </div>
 
@@ -137,15 +137,15 @@ export const FieldIntelligence = () => {
             </ResponsiveContainer>
           </div>
 
-          {/* Expected line reference */}
+          {/* Referensi Garis */}
           <div className="flex items-center gap-4 mt-2">
             <div className="flex items-center gap-1 text-xs">
               <div className="w-4 h-0.5 bg-info" />
-              <span className="text-muted-foreground">Actual</span>
+              <span className="text-muted-foreground">Aktual</span>
             </div>
             <div className="flex items-center gap-1 text-xs">
               <div className="w-4 h-0.5 bg-muted-foreground/30 border-dashed" style={{ borderTop: '2px dashed hsl(var(--muted-foreground) / 0.5)' }} />
-              <span className="text-muted-foreground">Expected</span>
+              <span className="text-muted-foreground">Perkiraan</span>
             </div>
           </div>
 
@@ -153,22 +153,22 @@ export const FieldIntelligence = () => {
             <div className="flex items-start gap-2">
               <Info className="w-4 h-4 text-info flex-shrink-0 mt-0.5" />
               <p className="text-xs text-muted-foreground">
-                Rainfall this week is 15% above seasonal average. Drainage systems in Clusters A & C should be monitored closely.
+                Curah hujan minggu ini 15% di atas rata-rata musiman. Sistem drainase di Kluster A & C perlu dipantau secara ketat.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Cluster Health Overview */}
+        {/* Ikhtisar Kesehatan Kluster */}
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-warning" />
-              <span className="text-sm font-medium text-foreground">Cluster Health Overview</span>
+              <span className="text-sm font-medium text-foreground">Ikhtisar Kesehatan Kluster</span>
             </div>
             <div className="flex items-center gap-1 text-xs text-danger">
               <AlertTriangle className="w-3 h-3" />
-              <span>Cluster B Alert</span>
+              <span>Peringatan Kluster B</span>
             </div>
           </div>
 
@@ -185,8 +185,8 @@ export const FieldIntelligence = () => {
                     fontSize: '12px',
                   }}
                 />
-                <Bar dataKey="compliance" name="Compliance %" fill="hsl(142, 76%, 36%)" radius={[2, 2, 0, 0]} />
-                <Bar dataKey="health" name="Crop Health %" fill="hsl(48, 96%, 53%)" radius={[2, 2, 0, 0]} />
+                <Bar dataKey="compliance" name="Kepatuhan %" fill="hsl(142, 76%, 36%)" radius={[2, 2, 0, 0]} />
+                <Bar dataKey="health" name="Kesehatan Tanaman %" fill="hsl(48, 96%, 53%)" radius={[2, 2, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -194,11 +194,11 @@ export const FieldIntelligence = () => {
           <div className="flex items-center justify-center gap-6 mt-2">
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-3 rounded-sm bg-success" />
-              <span className="text-muted-foreground">Compliance %</span>
+              <span className="text-muted-foreground">Kepatuhan %</span>
             </div>
             <div className="flex items-center gap-1 text-xs">
               <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'hsl(48, 96%, 53%)' }} />
-              <span className="text-muted-foreground">Crop Health %</span>
+              <span className="text-muted-foreground">Kesehatan Tanaman %</span>
             </div>
           </div>
 
@@ -206,7 +206,7 @@ export const FieldIntelligence = () => {
             <div className="flex items-start gap-2">
               <AlertTriangle className="w-4 h-4 text-warning flex-shrink-0 mt-0.5" />
               <p className="text-xs text-muted-foreground">
-                Cluster B shows lower crop health (78%) and farmer compliance (88%). Recommend targeted field officer visits and technical assistance.
+                Kluster B menunjukkan kesehatan tanaman lebih rendah (78%) dan kepatuhan petani (88%). Disarankan kunjungan petugas lapangan dan pendampingan teknis.
               </p>
             </div>
           </div>

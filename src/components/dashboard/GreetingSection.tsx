@@ -30,33 +30,33 @@ export const GreetingSection = ({ userName }: GreetingSectionProps) => {
             {getGreeting()}, Pak {userName}
           </h1>
           <p className="text-sm text-muted-foreground">
-            Here's your executive summary for Musim Tanam 1 operations. Overall performance is{" "}
-            <span className="text-success font-medium">on track</span> with{" "}
-            <span className="text-warning font-medium">2 items requiring attention</span>.
+            Berikut ringkasan eksekutif untuk operasional Musim Tanam 1. Performa secara keseluruhan{" "}
+            <span className="text-success font-medium">berjalan sesuai rencana</span> dengan{" "}
+            <span className="text-warning font-medium">2 hal yang memerlukan perhatian</span>.
           </p>
         </div>
 
         {/* Status Badges */}
         <div className="flex items-center gap-3">
-          {/* On Track */}
+          {/* Sesuai Rencana */}
           <div className="flex flex-col items-center bg-success/10 border border-success/30 rounded-xl px-4 py-3 min-w-[80px]">
             <CheckCircle2 className="w-5 h-5 text-success mb-1" />
             <span className="text-xl font-bold text-success">4</span>
-            <span className="text-[10px] text-muted-foreground">On Track</span>
+            <span className="text-[10px] text-muted-foreground">Sesuai Rencana</span>
           </div>
 
-          {/* Needs Attention */}
+          {/* Perlu Perhatian */}
           <div className="flex flex-col items-center bg-warning/10 border border-warning/30 rounded-xl px-4 py-3 min-w-[80px]">
             <AlertTriangle className="w-5 h-5 text-warning mb-1" />
             <span className="text-xl font-bold text-warning">2</span>
-            <span className="text-[10px] text-muted-foreground">Needs Attention</span>
+            <span className="text-[10px] text-muted-foreground">Perlu Perhatian</span>
           </div>
 
-          {/* Growth Rate */}
+          {/* Tingkat Pertumbuhan */}
           <div className="flex flex-col items-center bg-info/10 border border-info/30 rounded-xl px-4 py-3 min-w-[80px]">
             <TrendingUp className="w-5 h-5 text-info mb-1" />
             <span className="text-xl font-bold text-info">+4.8%</span>
-            <span className="text-[10px] text-muted-foreground">Growth Rate</span>
+            <span className="text-[10px] text-muted-foreground">Tingkat Pertumbuhan</span>
           </div>
         </div>
       </div>

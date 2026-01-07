@@ -46,7 +46,7 @@ const KPICard = ({ icon, iconBg, value, unit, label, target, trend, status }: KP
         {status === "on-track" && (
           <div className="flex items-center gap-1 text-xs font-medium text-success">
             <span>—</span>
-            <span>On Track</span>
+            <span>Sesuai Target</span>
           </div>
         )}
       </div>
@@ -71,8 +71,8 @@ export const KPISection = () => {
   return (
     <div className="mb-6">
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-sm font-semibold text-foreground">Key Performance Indicators</h2>
-        <span className="text-xs text-muted-foreground">• MT-1 Season Progress</span>
+        <h2 className="text-sm font-semibold text-foreground">Indikator Kinerja Utama</h2>
+        <span className="text-xs text-muted-foreground">• Progres Musim MT-1</span>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -81,7 +81,7 @@ export const KPISection = () => {
           iconBg="bg-primary/10"
           value="12,450"
           unit="Ha"
-          label="Total Planted Area"
+          label="Total Luas Tanam"
           target="13,000 Ha"
           trend={{ value: "+4.2%", isPositive: true }}
         />
@@ -91,7 +91,7 @@ export const KPISection = () => {
           iconBg="bg-success/10"
           value="68,750"
           unit="Ton"
-          label="Estimated Production"
+          label="Estimasi Produksi"
           target="70,000 Ton"
           trend={{ value: "+6.8%", isPositive: true }}
         />
@@ -101,7 +101,7 @@ export const KPISection = () => {
           iconBg="bg-info/10"
           value="5.52"
           unit="Ton/Ha"
-          label="Productivity Index"
+          label="Indeks Produktivitas"
           target="5.4 Ton/Ha"
           trend={{ value: "+2.2%", isPositive: true }}
         />
@@ -111,7 +111,7 @@ export const KPISection = () => {
           iconBg="bg-warning/10"
           value="5.6"
           unit="Jt Rp"
-          label="Average Cost/Ha"
+          label="Biaya Rata-rata/Ha"
           target="≤5.8 Jt Rp"
           trend={{ value: "-3.4%", isPositive: false }}
         />
@@ -121,7 +121,7 @@ export const KPISection = () => {
           iconBg="bg-accent/10"
           value="28.5"
           unit="%"
-          label="Gross Margin"
+          label="Margin Kotor"
           target="≥25%"
           trend={{ value: "+1.8%", isPositive: true }}
         />
@@ -131,7 +131,7 @@ export const KPISection = () => {
           iconBg="bg-success/10"
           value="96.2"
           unit="%"
-          label="Supply Fulfillment"
+          label="Pemenuhan Pasokan"
           target="100% Target"
           status="on-track"
         />
