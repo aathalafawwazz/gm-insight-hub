@@ -1,69 +1,47 @@
 import { Link } from "react-router-dom";
-import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
-import { QuickInsights } from "@/components/dashboard/QuickInsights";
-import { ProductionSection } from "@/components/dashboard/ProductionSection";
+import { TopNavBar } from "@/components/dashboard/TopNavBar";
+import { GreetingSection } from "@/components/dashboard/GreetingSection";
+import { KPISection } from "@/components/dashboard/KPISection";
+import { FieldIntelligence } from "@/components/dashboard/FieldIntelligence";
+import { ProductionAnalytics } from "@/components/dashboard/ProductionAnalytics";
 import { ProductionMap } from "@/components/dashboard/ProductionMap";
-import { FinancialSection } from "@/components/dashboard/FinancialSection";
-import { RiskAlertSection } from "@/components/dashboard/RiskAlertSection";
-import { ProductionTrendChart } from "@/components/dashboard/ProductionTrendChart";
-import { SiteComparisonChart } from "@/components/dashboard/SiteComparisonChart";
-import { FinancialTrendChart } from "@/components/dashboard/FinancialTrendChart";
-import { RiskDistributionChart } from "@/components/dashboard/RiskDistributionChart";
-import { SeasonComparison } from "@/components/dashboard/SeasonComparison";
 import { QuickActions } from "@/components/dashboard/QuickActions";
-import { TimeFilter } from "@/components/dashboard/TimeFilter";
 import { Users } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header with personalized greeting */}
-        <DashboardHeader userName="Budi Santoso" userRole="General Manager" />
+      {/* Top Navigation Bar */}
+      <TopNavBar userName="Kenichiro Nugroho" location="Baturaja, Indonesia" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        {/* Greeting Section with Status Badges */}
+        <GreetingSection userName="Kenichiro" />
         
         {/* Quick Navigation to PM Dashboard */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3 mb-5">
           <Link
             to="/pm"
-            className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 text-foreground rounded-xl text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-secondary hover:bg-secondary/80 text-foreground rounded-lg text-sm font-medium transition-colors"
           >
             <Users className="w-4 h-4" />
             Lihat Dashboard Project Manager
           </Link>
-          <TimeFilter />
         </div>
         
-        {/* Quick Insights for GM */}
-        <QuickInsights />
+        {/* Key Performance Indicators */}
+        <KPISection />
         
-        {/* Production & Productivity Metrics */}
-        <ProductionSection />
+        {/* Field Intelligence Section */}
+        <FieldIntelligence />
         
-        {/* Production Map with Hover Info */}
-        <div className="mb-6 animate-fade-in" style={{ animationDelay: "0.25s" }}>
+        {/* Production Analytics Charts */}
+        <ProductionAnalytics />
+        
+        {/* Production Map - Enlarged for better interaction */}
+        <div className="mb-6">
           <ProductionMap />
         </div>
-        
-        {/* Financial Metrics */}
-        <FinancialSection />
-        
-        {/* Risk Alerts & Recommendations Status */}
-        <RiskAlertSection />
-        
-        {/* Production Trend Chart */}
-        <ProductionTrendChart />
-        
-        {/* Site Comparison */}
-        <SiteComparisonChart />
-        
-        {/* Financial Trend */}
-        <FinancialTrendChart />
-        
-        {/* Risk Distribution & Recommendation Trend */}
-        <RiskDistributionChart />
-        
-        {/* Season Comparison */}
-        <SeasonComparison />
         
         {/* Quick Actions FAB */}
         <QuickActions />

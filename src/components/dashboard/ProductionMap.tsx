@@ -98,7 +98,7 @@ export const ProductionMap = () => {
       <div className="relative bg-gradient-to-br from-emerald-900/20 to-green-800/30 rounded-xl overflow-hidden border border-border/50">
         <svg
           viewBox="0 0 100 65"
-          className="w-full h-48 lg:h-56"
+          className="w-full h-80 lg:h-[420px]"
           style={{ background: "linear-gradient(135deg, hsl(142, 40%, 15%) 0%, hsl(142, 30%, 20%) 100%)" }}
         >
           {/* Background grid pattern */}
