@@ -1,6 +1,6 @@
-import { Map, BarChart3, Brain, Sparkles } from "lucide-react";
+import { Map, BarChart3, Brain, Sparkles, LayoutDashboard } from "lucide-react";
 
-type ActivePage = "peta-ndvi" | "analisis-korelasi" | "ai-dss" | "generator-rekomendasi";
+type ActivePage = "dashboard" | "peta-ndvi" | "analisis-korelasi" | "ai-dss" | "generator-rekomendasi";
 
 interface PMSidebarProps {
   activePage: ActivePage;
@@ -8,6 +8,7 @@ interface PMSidebarProps {
 }
 
 const menuItems = [
+  { id: "dashboard" as const, label: "Dashboard", icon: LayoutDashboard },
   { id: "peta-ndvi" as const, label: "Peta & NDVI", icon: Map },
   { id: "analisis-korelasi" as const, label: "Analisis Korelasi", icon: BarChart3 },
   { id: "ai-dss" as const, label: "AI & DSS", icon: Brain },
