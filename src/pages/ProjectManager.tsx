@@ -7,14 +7,17 @@ import { NDVIDataTable } from "@/components/pm/NDVIDataTable";
 import { CorrelationAnalysis } from "@/components/pm/CorrelationAnalysis";
 import { AIPredictions } from "@/components/pm/AIPredictions";
 import { RecommendationGenerator } from "@/components/pm/RecommendationGenerator";
+import { PMDashboard } from "@/components/pm/PMDashboard";
 
-type ActivePage = "peta-ndvi" | "analisis-korelasi" | "ai-dss" | "generator-rekomendasi";
+type ActivePage = "dashboard" | "peta-ndvi" | "analisis-korelasi" | "ai-dss" | "generator-rekomendasi";
 
 const ProjectManager = () => {
-  const [activePage, setActivePage] = useState<ActivePage>("peta-ndvi");
+  const [activePage, setActivePage] = useState<ActivePage>("dashboard");
 
   const renderContent = () => {
     switch (activePage) {
+      case "dashboard":
+        return <PMDashboard onNavigate={setActivePage} />;
       case "peta-ndvi":
         return (
           <div className="space-y-6">
